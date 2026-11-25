@@ -2712,6 +2712,7 @@ class ToolChain(AgentBreaker):
             ),
             "prior_artifacts": self._format_prior_artifacts(chain),
             "vulnerabilities": chain.get("vulnerabilities", ""),
+            "artifact_choice_rule": self._prompts["ARTIFACT_CHOICE_RULE"].strip(),
         }
 
     def _generate_step_attack_prompt(
